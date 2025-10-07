@@ -10,10 +10,7 @@ The website is organized as follows:
 - `README.md`: The main landing page for the website.
 - `HOW_TO.md`: This file, containing the contribution instructions.
 - `projects/`: This directory contains the individual Markdown subpages for each project.
-  - `synthetic-ct.md`
-  - `...` (etc.)
 - `assets/`: This directory holds all static assets.
-  - `css/style.scss`: The custom stylesheet that overrides the base theme to create the site's professional look.
 
 ## How to Add a New Project
 
@@ -26,12 +23,28 @@ The website is organized as follows:
 ### 2. Add a Link to the Main Page
 
 - Open the root `README.md` file.
-- Find the `<ul>` list under the "Our Projects" section.
-- **Important:** Add a new list item using the HTML `<li>` tag to ensure it renders correctly.
+- Find the `projects-section` `<div>`. The structure looks like this:
+
+  ```html
+  <div class="projects-section">
+
+  <h2>Our Projects</h2>
+
+  <ul>
+    <li><a href="...">...</a></li>
+    <!-- Add new projects here -->
+  </ul>
+
+  </div>
+  ```
+
+- **Important:** Add a new list item for your project using the HTML `<li>` tag inside the `<ul>`. This is critical to ensure it renders correctly.
 
   ```html
   <li><a href="./projects/new-cool-project.html">Name of Your New Cool Project</a></li>
   ```
+
+**Note on Rendering:** To avoid issues with how GitHub Pages renders Markdown inside HTML, we use standard HTML tags (`<h2>`, `<ul>`, `<li>`) for the project list section in the `README.md`. Please maintain this structure.
 
 ### 3. Add Any Images (Optional)
 
@@ -45,11 +58,8 @@ The website is organized as follows:
 
 ## Customizing the Style
 
-The website uses the `jekyll-theme-minimal` as a base, but its appearance is customized.
-
-- **Base Theme:** The theme is set in the `_config.yml` file.
-- **Custom Styles:** All custom styles, colors, and layout adjustments are located in the `assets/css/style.scss` file. If you need to make design changes, you should edit this file.
+The website's appearance is controlled by the files in the `assets/css/` directory and the theme set in `_config.yml`. If you need to make design changes, you should edit these files.
 
 ## Deployment
 
-The website is automatically built and deployed by GitHub Pages whenever changes are pushed to the `main` branch, as long as the source is set to the repository root in the repository settings. No special configuration is needed.
+The website is automatically built and deployed by GitHub Pages whenever changes are pushed to the `main` branch. No special configuration is needed.

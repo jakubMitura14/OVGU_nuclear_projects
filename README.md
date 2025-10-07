@@ -8,7 +8,7 @@ Part of the [University Clinic for Radiology and Nuclear Medicine](https://www.m
 
 <div class="projects-section">
 
-## Our Projects
+<h2>Our Projects</h2>
 
 <ul>
   <li><a href="./projects/synthetic-ct.html">Synthetic CT Creation from Nuclear Imaging</a></li>
