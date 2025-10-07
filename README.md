@@ -6,12 +6,14 @@ Part of the [University Clinic for Radiology and Nuclear Medicine](https://www.m
 
 ---
 
+<div class="projects-section">
 ## Our Projects
 
 *   [Synthetic CT Creation from Nuclear Imaging](./projects/synthetic-ct.html)
 *   [Thyroid Guidelines Support App](./projects/thyroid-app.html)
 *   [Structured Reporting for Thyroid Visits](./projects/structured-reporting.html)
 *   [Semi-Automatic Image Segmentation Pipeline](./projects/segmentation-pipeline.html)
+</div>
 
 ---
 
