@@ -26,11 +26,11 @@ The website is organized as follows:
 ### 2. Add a Link to the Main Page
 
 - Open the root `README.md` file.
-- Find the list under the "Our Projects" section.
-- Add a new list item that links to your new project file. GitHub Pages will automatically convert the `.md` file to `.html`.
+- Find the `<ul>` list under the "Our Projects" section.
+- **Important:** Add a new list item using the HTML `<li>` tag to ensure it renders correctly.
 
-  ```markdown
-  * [Name of Your New Cool Project](./projects/new-cool-project.html)
+  ```html
+  <li><a href="./projects/new-cool-project.html">Name of Your New Cool Project</a></li>
   ```
 
 ### 3. Add Any Images (Optional)
