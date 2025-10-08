@@ -1,92 +1,33 @@
 # sCT Generation from Nuclear Medicine Scans: A Patch-Based Ensemble Approach
 
-This repository contains an advanced deep learning pipeline to generate high-fidelity synthetic CT (sCT) images from nuclear medicine scans (e.g., PET). The pipeline has been significantly refactored to leverage a full-resolution, patch-based training strategy with an ensemble of five state-of-the-art [TotalSegmentator](https://github.com/wasserth/TotalSegmentator) models. This approach, built on PyTorch Lightning, ensures both computational efficiency and high anatomical accuracy.
+This project showcases an advanced deep learning pipeline designed to address a critical challenge in medical imaging: generating high-fidelity **synthetic CT (sCT) images** directly from nuclear medicine scans like PET. By providing rich anatomical context where it is typically absent, this technology enhances the diagnostic value of functional scans and opens new possibilities for treatment planning and analysis.
 
-## 🚀 Architectural Overview
+Our approach, built on PyTorch Lightning, leverages a full-resolution, patch-based training strategy with a novel **ensemble of five state-of-the-art models**, ensuring both computational efficiency and exceptional anatomical accuracy.
 
-The core idea is to train a generative model that learns to translate a nuclear medicine image into a corresponding CT image. To ensure the generated CT is not just plausible but also anatomically accurate, the training process uses a unique, dual-model loss mechanism.
+## The Challenge: Adding Anatomy to Function
 
-## Model Architecture
+Nuclear medicine scans are powerful for revealing metabolic function, but they lack the detailed anatomical information of a CT scan. This project bridges that gap by training a generative model to translate a nuclear medicine image into a corresponding CT image. To ensure the generated CT is not just plausible but also anatomically precise, we've developed a unique, dual-model loss mechanism.
 
-The model is composed of three main components, all defined in `pl_custom_trainer.py`:
+## Key Innovations & Expertise
 
-1.  **An Ensemble of Generators**: The pipeline now uses an ensemble of five independent nnU-Net models, managed via a `torch.nn.ModuleDict`. Each generator is initialized with pretrained weights from a specific TotalSegmentator model (organs, vertebrae, cardiac, muscles, and ribs). During training, each generator takes a patch from the NUKL scan and produces a set of anatomical feature logits.
+This project demonstrates our expertise in building sophisticated, reliable, and efficient generative models for medical imaging.
 
-2.  **sCT Adapters**: Each generator is paired with a lightweight 3D convolutional "adapter." Each adapter takes the multi-channel anatomical logits from its generator and translates them into an intermediate single-channel sCT patch.
+### 1. The Ensemble of Experts
+Instead of a single monolithic model, our pipeline uses an **ensemble of five independent nnU-Net models**, each pretrained as an "expert" on a specific anatomical region using the TotalSegmentator dataset (organs, vertebrae, cardiac, muscles, and ribs). During training, these experts work in concert, each providing its specialized anatomical knowledge to a set of lightweight "adapter" networks that generate the final sCT. This division of labor ensures a higher level of detail and accuracy than a single model could achieve alone.
 
-3.  **Final sCT Adapter**: The five intermediate sCT patches are concatenated and passed to a final adapter, which intelligently combines them into a single, refined sCT patch.
+### 2. The "Anatomical Supervisor": A Dual-Model Loss
+A key innovation is our method for ensuring the generated sCT is anatomically correct. We use a parallel, identical ensemble of segmentation models whose weights are **frozen** during training. This "anatomical supervisor" constantly evaluates the synthetic CT produced by the main model. If the generated sCT "confuses" the supervisor, a strong loss signal is sent back, forcing the generator to produce images that are not only visually realistic but also make perfect anatomical sense to another expert AI. This self-correction mechanism is critical for building trust in the generated images.
 
-4.  **Frozen Ensemble for Anatomical Loss**: A parallel, identical ensemble of five nnU-Net models is used exclusively for calculating the anatomical loss. The weights of these models are **frozen** and are not updated. This ensures that the generated sCT maintains anatomical consistency with what a pretrained segmentation model would expect.
+### 3. Efficient Patch-Based Training
+To handle high-resolution medical images efficiently, the entire pipeline is built on a **patch-based training loop**. By feeding the model smaller `128x128x128` patches, we can train on full-resolution data without the prohibitive memory requirements of full-image training, making the development of such advanced models more feasible.
 
-### Patch-Based Training
+## Clinical Impact & Significance
 
-A key innovation in this pipeline is the move to a patch-based training loop. By leveraging the standard nnU-Net dataloader, the model is fed pre-processed `128x128x128` patches. This is possible because all five models in the ensemble share the same data requirements (voxel spacing and patch size). This change dramatically improves training efficiency and memory usage.
+This work represents a significant step forward in computational medical imaging. By generating high-quality synthetic CTs, this technology has the potential to:
+- **Enhance Diagnostic Confidence** by providing crucial anatomical context for functional scans.
+- **Improve Attenuation Correction** in PET imaging, leading to more accurate quantification.
+- **Enable More Precise Treatment Planning** by allowing clinicians to better localize tumors and other pathologies.
 
-### Loss Function
-
-The total loss is a weighted sum of two components, ensuring both image fidelity and anatomical correctness at the patch level:
-
-1.  **L2 Loss (MSE)**: A straightforward Mean Squared Error loss that compares the generated synthetic CT with the ground truth CT image. This encourages the model to produce images with similar intensity values.
-
-2.  **Anatomical Consistency Loss (Dice+CE)**: This is the key component for ensuring anatomical correctness. The synthetic CT generated by the adapter is passed as input to the **Frozen Model**. The resulting anatomical segmentation from the frozen model is then compared to the ground truth segmentation of the real CT. The loss (Dice + Cross-Entropy) from this comparison penalizes the Generator and Adapter if they produce a synthetic CT that "confuses" the frozen segmentation model.
-
-The training process only updates the weights of the **Generator** and the **Adapter**.
-
-## Repository Structure
-
--   `submit_slurm.sh`: The main entry point for starting a training job on a SLURM cluster.
--   `run_pipeline_slurm.sh`: The core training pipeline script that handles data preparation, preprocessing, and launching the training.
--   `_run_lightning_training.py`: The script that sets up and runs the PyTorch Lightning training session.
--   `pl_custom_trainer.py`: Contains the core `LightningModule` (`NuklToCTLightningModule`) and `LightningDataModule` (`NuklToCTDataModule`), defining the model architecture, loss functions, and data loading.
--   `monai_data_loader.py`: Contains the MONAI-based data loading pipeline.
--   `environment.yaml`: The conda environment file with all necessary dependencies.
--   `nnunet_..._data/`: Directories that will be populated by the pipeline for raw, preprocessed, and results data, following the nnU-Net convention.
-
-## 🛠️ Setup and Training
-
-### 1. Environment Setup
-
-All required dependencies are listed in the `environment.yaml` file. You can create the conda environment using:
-
-```bash
-conda env create -f environment.yaml
-conda activate nukl-to-ct
-```
-
-### 2. Download Pretrained Model Weights
-
-The pipeline requires five pretrained TotalSegmentator models. The training script will attempt to download these automatically, but you can also acquire them manually from the following URLs and place them in your `totalseg_weights` directory:
-
--   **Part 1 (Organs)**: [Task 291](https://github.com/wasserth/TotalSegmentator/releases/download/v2.0.0-weights/Dataset291_TotalSegmentator_part1_organs_1559subj.zip)
--   **Part 2 (Vertebrae)**: [Task 292](https://github.com/wasserth/TotalSegmentator/releases/download/v2.0.0-weights/Dataset292_TotalSegmentator_part2_vertebrae_1532subj.zip)
--   **Part 3 (Cardiac)**: [Task 293](https://github.com/wasserth/TotalSegmentator/releases/download/v2.0.0-weights/Dataset293_TotalSegmentator_part3_cardiac_1559subj.zip)
--   **Part 4 (Muscles)**: [Task 294](https://github.com/wasserth/TotalSegmentator/releases/download/v2.0.0-weights/Dataset294_TotalSegmentator_part4_muscles_1559subj.zip)
--   **Part 5 (Ribs)**: [Task 295](https://github.com/wasserth/TotalSegmentator/releases/download/v2.0.0-weights/Dataset295_TotalSegmentator_part5_ribs_1559subj.zip)
-
-### 3. Prepare Data
-
-The training pipeline expects your data to be in the nnU-Net format. You will need to run `nnUNetv2_plan_and_preprocess` for your dataset. Since all five pretrained models use a `1.5mm` isotropic voxel spacing, you can use the `plans.json` from any of the downloaded models to guide the preprocessing.
-
-### 4. Run Training
-
-The main entry point for training is the `_run_lightning_training.py` script. It can be configured with command-line arguments. For distributed training on a SLURM cluster, you can use the provided `submit_slurm.sh` script after adjusting the paths for your environment.
-
-Example of launching a training run:
-```bash
-sbatch submit_slurm.sh
-```
-
-The `run_pipeline_slurm.sh` script will automatically:
-1. Download the necessary pretrained TotalSegmentator weights.
-2. Prepare the data into the nnU-Net format.
-3. Run nnU-Net's planning and preprocessing steps.
-4. Launch the PyTorch Lightning trainer with the MONAI data loader.
-
-## Checkpointing and Resuming
-
-The training script is designed to automatically handle checkpointing and resuming.
-- At the end of each validation epoch, a checkpoint is saved to the results directory (`nnunet_results/...`). A special `last.ckpt` file is always kept up-to-date.
-- If the training script is started and a `last.ckpt` file is found in the output directory, the trainer will automatically resume from that checkpoint.
-- When resuming, the script is smart enough to **not** reload the initial TotalSegmentator pretrained weights, as they are already part of the saved checkpoint.
+This project showcases our ability to design and implement complex, multi-model AI systems that solve real-world clinical challenges.
 
 [Back to all projects](../README.md)
