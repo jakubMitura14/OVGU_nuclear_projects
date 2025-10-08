@@ -15,6 +15,7 @@ Part of the [University Clinic for Radiology and Nuclear Medicine](https://www.m
   <li><a href="./projects/thyroid-app.html">Clinical Decision Support System for Thyroid Cancer</a></li>
   <li><a href="./projects/structured-reporting.html">German Radiology Report Analyzer</a></li>
   <li><a href="./projects/segmentation-pipeline.html">Semi-Automatic Image Segmentation Pipeline</a></li>
+  <li><a href="./projects/evolutionary-modeling.html">Evolutionary 3D Geometric Modeling</a></li>
 </ul>
 
 </div>
