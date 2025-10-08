@@ -12,8 +12,8 @@ Part of the [University Clinic for Radiology and Nuclear Medicine](https://www.m
 
 <ul>
   <li><a href="./projects/synthetic-ct.html">Synthetic CT Creation from Nuclear Imaging</a></li>
-  <li><a href="./projects/thyroid-app.html">Thyroid Guidelines Support App</a></li>
-  <li><a href="./projects/structured-reporting.html">Structured Reporting for Thyroid Visits</a></li>
+  <li><a href="./projects/thyroid-app.html">Clinical Decision Support System for Thyroid Cancer</a></li>
+  <li><a href="./projects/structured-reporting.html">German Radiology Report Analyzer</a></li>
   <li><a href="./projects/segmentation-pipeline.html">Semi-Automatic Image Segmentation Pipeline</a></li>
 </ul>
 
