@@ -135,11 +135,6 @@ footer p {
     object-fit: cover;
 }
 
-.content-wrapper {
-    position: relative;
-    z-index: 1;
-}
-
 /* Override existing dark text styles */
 body {
     background-color: #000; /* Fallback color */
@@ -147,8 +142,12 @@ body {
 }
 
 .wrapper {
-    background: transparent;
+    background: rgba(0, 0, 0, 0.6);
     box-shadow: none;
+    position: relative;
+    z-index: 1;
+    border-radius: 8px;
+    padding: 2rem;
 }
 
 header {
