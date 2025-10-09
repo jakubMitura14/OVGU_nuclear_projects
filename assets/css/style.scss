@@ -142,12 +142,24 @@ body {
 }
 
 .wrapper {
-    background: rgba(0, 0, 0, 0.8);
+    background: transparent;
     box-shadow: none;
     position: relative;
-    z-index: 1;
     border-radius: 8px;
     padding: 2rem;
+    overflow: hidden; /* Ensures pseudo-element respects border-radius */
+}
+
+.wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1; /* Positioned behind the content */
+    border-radius: inherit; /* Inherit border-radius from parent */
 }
 
 header {
