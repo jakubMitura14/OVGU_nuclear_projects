@@ -121,3 +121,72 @@ footer p {
     text-align: center;
     margin-top: 3rem;
 }
+
+/* --- Video Background Styles --- */
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+/* Override existing dark text styles */
+body {
+    background-color: #000; /* Fallback color */
+    color: #f1f1f1; /* Bright text color */
+}
+
+.wrapper {
+    background: transparent;
+    box-shadow: none;
+}
+
+header {
+    background: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header h1, header p {
+    color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+a, a:visited {
+    color: #add8e6; /* Light blue for links */
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+.projects-section ul li {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.projects-section ul li a {
+    color: #f1f1f1;
+}
+
+.projects-section ul li:hover {
+    border-color: #add8e6;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+footer p {
+    color: #f1f1f1;
+}

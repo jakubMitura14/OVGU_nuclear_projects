@@ -1,3 +1,10 @@
+<video autoplay muted loop id="background-video">
+  <source src="assets/Whisk_mjy0utm5gdo5iwo10sylvtotczy2qtlkhtzl1ym.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<div class="content-wrapper">
+
 # OVGU Nuclear Medicine Clinic - AI Expertise
 
 *Showcasing our innovation and research in Artificial Intelligence for Nuclear Medicine.*
@@ -42,3 +49,5 @@ Our clinic has been recognized for its excellence in theranostics, demonstrating
 *For instructions on how to contribute to this page, please see the [HOW_TO.md](./HOW_TO.md) file.*
 
 *© 2024 OVGU Nuclear Medicine Clinic. All rights reserved.*
+
+</div>
