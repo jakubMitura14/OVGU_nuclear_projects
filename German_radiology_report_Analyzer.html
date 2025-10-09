@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>German Radiology Report Analyzer - Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        .flow-arrow {
+            position: relative;
+            padding-bottom: 3rem; /* Space for the arrow */
+        }
+        .flow-arrow::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 1rem;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 2rem;
+            background-color: #cbd5e1; /* slate-300 */
+        }
+        .flow-arrow:last-child::after {
+            display: none;
+        }
+         .flow-arrow-down-long::after {
+            content: '↓';
+            font-size: 2rem;
+            color: #3b82f6; /* blue-500 */
+            position: absolute;
+            left: 50%;
+            bottom: -1rem;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body class="antialiased text-slate-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-blue-600 mb-4">German Radiology Report Analyzer</h1>
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
+                Leveraging LLMs to transform complex, unstructured medical texts into a standardized, validated, and machine-readable format.
+            </p>
+        </header>
+
+        <!-- Main Pipeline Section -->
+        <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-slate-200 mb-12">
+            <h2 class="text-2xl font-bold text-center mb-8 text-slate-700">From Complex Text to Structured Data</h2>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 text-center items-start">
+                
+                <!-- Step 1: Unstructured Report -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-rose-100 text-rose-600 rounded-full h-16 w-16 flex items-center justify-center mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+                    </div>
+                    <h3 class="font-semibold mb-1">Unstructured Report</h3>
+                    <p class="text-sm text-slate-500">Complex German-language medical text.</p>
+                </div>
+
+                <!-- Arrow -->
+                <div class="hidden md:flex items-center justify-center mt-8">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400 w-12 h-12"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </div>
+
+                <!-- Step 2: LLM Pipeline -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-indigo-100 text-indigo-600 rounded-full h-16 w-16 flex items-center justify-center mb-3">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 1a3 3 0 0 0-3 3v2h6V4a3 3 0 0 0-3-3Z"/><path d="M12 21a3 3 0 0 0 3-3v-2H9v2a3 3 0 0 0 3 3Z"/><path d="M5 12a3 3 0 0 0-3 3v2h6v-2a3 3 0 0 0-3-3Z"/><path d="M19 12a3 3 0 0 0-3 3v2h6v-2a3 3 0 0 0-3-3Z"/><path d="M5 10a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2"/><path d="M19 10a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2"/></svg>
+                    </div>
+                    <h3 class="font-semibold mb-1">LLM-Powered Pipeline</h3>
+                    <p class="text-sm text-slate-500">Translation, Extraction, and Quality Control.</p>
+                </div>
+
+                 <!-- Arrow -->
+                <div class="hidden md:flex items-center justify-center mt-8">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400 w-12 h-12"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </div>
+
+                <!-- Step 3: Structured Data -->
+                <div class="flex flex-col items-center">
+                     <div class="bg-emerald-100 text-emerald-600 rounded-full h-16 w-16 flex items-center justify-center mb-3">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </div>
+                    <h3 class="font-semibold mb-1">Structured Data</h3>
+                    <p class="text-sm text-slate-500">Clean, validated, and machine-readable output.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Key Innovations Section -->
+        <h2 class="text-3xl font-bold text-center mb-10 mt-16 text-slate-800">Key Innovations & Expertise</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Innovation 1: Detect then Extract -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200 flex flex-col">
+                <div class="flex-shrink-0">
+                    <div class="bg-sky-100 text-sky-600 rounded-full h-16 w-16 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Advanced "Detect then Extract" Process</h3>
+                </div>
+                <div class="flex-grow space-y-6 mt-4">
+                    <div class="flow-arrow flex items-start">
+                        <span class="bg-sky-500 text-white rounded-full w-8 h-8 flex-shrink-0 flex items-center justify-center font-bold mr-4">1</span>
+                        <div>
+                            <h4 class="font-semibold">Detection</h4>
+                            <p class="text-slate-600">A quick, targeted LLM call determines if complex entities (e.g., nodules) are present.</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow flex items-start">
+                        <span class="bg-sky-500 text-white rounded-full w-8 h-8 flex-shrink-0 flex items-center justify-center font-bold mr-4">2</span>
+                        <div>
+                            <h4 class="font-semibold">Extraction</h4>
+                            <p class="text-slate-600">Only if detected, a second, focused LLM call extracts detailed characteristics based on a specific schema.</p>
+                        </div>
+                    </div>
+                     <div class="bg-sky-50 border-l-4 border-sky-400 text-sky-800 p-4 rounded-r-lg">
+                        <p class="font-semibold">Result: Significantly improves accuracy and prevents the model from "hallucinating" information.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Innovation 2: Self-Correction Loop -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200 flex flex-col">
+                 <div class="flex-shrink-0">
+                    <div class="bg-amber-100 text-amber-600 rounded-full h-16 w-16 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6"/><path d="M2.5 22v-6h6"/><path d="M2 11.5a10 10 0 0 1 18.8-4.3l-3.3 3.3a5 5 0 0 0-8.2 4l-3.3 3.3"/><path d="M22 12.5a10 10 0 0 1-18.8 4.3l3.3-3.3a5 5 0 0 0 8.2-4l3.3-3.3"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Automated Self-Correction Loop</h3>
+                </div>
+                <div class="flex-grow space-y-6 mt-4">
+                    <div class="flow-arrow flex items-start">
+                        <span class="bg-amber-500 text-white rounded-full w-8 h-8 flex-shrink-0 flex items-center justify-center font-bold mr-4">1</span>
+                        <div>
+                            <h4 class="font-semibold">Fill Empty Fields</h4>
+                            <p class="text-slate-600">The system asks the LLM to identify and fill in data points missed in the initial pass.</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow flex items-start">
+                         <span class="bg-amber-500 text-white rounded-full w-8 h-8 flex-shrink-0 flex items-center justify-center font-bold mr-4">2</span>
+                        <div>
+                            <h4 class="font-semibold">Correct Incorrect Fields</h4>
+                            <p class="text-slate-600">It then asks the LLM to review all filled data and correct any inaccuracies it finds.</p>
+                        </div>
+                    </div>
+                     <div class="bg-amber-50 border-l-4 border-amber-400 text-amber-800 p-4 rounded-r-lg">
+                        <p class="font-semibold">Result: An automated "peer review" that ensures the highest possible data quality and reliability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- Architecture and Impact Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <!-- Schema-Driven Architecture -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200">
+                <div class="flex items-center mb-4">
+                     <div class="bg-purple-100 text-purple-600 rounded-full h-12 w-12 flex items-center justify-center mr-4 flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold">Schema-Driven Architecture</h3>
+                </div>
+                <p class="text-slate-600">The entire extraction process is driven by JSON schemas. This makes the system highly configurable, extensible, and easy to adapt to new report formats or data types without changing the core code.</p>
+            </div>
+
+            <!-- Clinical Impact -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200">
+                <div class="flex items-center mb-4">
+                     <div class="bg-green-100 text-green-600 rounded-full h-12 w-12 flex items-center justify-center mr-4 flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold">Clinical Impact & Significance</h3>
+                </div>
+                <p class="text-slate-600 mb-4">Unlocks valuable information trapped in text-based reports, enabling large-scale studies, predictive models, and a deeper understanding of disease patterns.</p>
+                <div class="bg-green-50 p-4 rounded-lg text-center">
+                    <p class="font-semibold text-green-800">Making clinical data more <span class="font-bold">FAIR</span>:</p>
+                    <p class="text-sm text-green-700">Findable, Accessible, Interoperable, and Reusable.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="text-center mt-12 py-6 border-t border-slate-200">
+            <p class="text-slate-500">A critical step towards a more data-driven future in clinical research.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
