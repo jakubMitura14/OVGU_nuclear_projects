@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Clinical Decision Support System for Thyroid Cancer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .arrow {
+            position: relative;
+            padding: 1rem;
+        }
+        .arrow::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 20px solid #2563eb; /* blue-600 */
+        }
+        @media (min-width: 1024px) {
+            .arrow-horizontal {
+                position: relative;
+                padding: 1rem;
+            }
+            .arrow-horizontal::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: -20px;
+                transform: translateY(-50%);
+                width: 0;
+                height: 0;
+                border-top: 15px solid transparent;
+                border-bottom: 15px solid transparent;
+                border-left: 20px solid #2563eb; /* blue-600 */
+            }
+        }
+        .icon-shadow {
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+        }
+    </style>
+</head>
+<body class="gradient-bg text-gray-800 antialiased">
+
+    <!-- Main Container -->
+    <div class="container mx-auto p-4 sm:p-8 max-w-6xl">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                Clinical Decision Support System
+            </h1>
+            <p class="text-2xl font-semibold text-blue-700 mt-2">for Thyroid Cancer Management</p>
+            <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
+                A new level of precision in clinical care, translating complex guidelines into actionable, evidence-based recommendations for healthcare professionals.
+            </p>
+        </header>
+
+        <!-- System Architecture Section -->
+        <main class="bg-white/70 backdrop-blur-md rounded-2xl shadow-2xl p-6 sm:p-10">
+            <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">System Architecture: From Text to Treatment</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+
+                <!-- Phase 1: Automated Rule Generation -->
+                <div class="space-y-6">
+                    <div class="text-center p-4 bg-blue-100 rounded-xl">
+                        <h3 class="text-xl font-bold text-blue-800">Phase 1: Automated Rule Generation</h3>
+                        <p class="text-sm text-blue-700 font-semibold">(Offline Knowledge Building)</p>
+                    </div>
+
+                    <!-- Step 1: Guidelines -->
+                    <div class="card rounded-lg p-4 flex items-center shadow-lg arrow">
+                        <div class="flex-shrink-0 bg-blue-500 text-white rounded-full h-12 w-12 flex items-center justify-center icon-shadow">
+                            <!-- Document Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-lg">Unstructured Clinical Guidelines</h4>
+                            <p class="text-sm text-gray-600">Raw text from established medical sources.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: LLM Engine -->
+                    <div class="card rounded-lg p-4 flex items-center shadow-lg arrow">
+                         <div class="flex-shrink-0 bg-blue-500 text-white rounded-full h-12 w-12 flex items-center justify-center icon-shadow">
+                            <!-- Brain Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.22,9.39a.75.75,0,0,0-.22-.52,10.7,10.7,0,0,0-15,0,.75.75,0,0,0,1,1.12,9.2,9.2,0,0,1,13,0A.75.75,0,0,0,17.22,9.39Z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.78,6.83a.75.75,0,0,0-.22-.52,15.2,15.2,0,0,0-21.5,0,.75.75,0,0,0,1,1.12,13.7,13.7,0,0,1,19.5,0A.75.75,0,0,0,19.78,6.83Z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9,13.5a.75.75,0,0,0,0,1.5H9a.75.75,0,0,0,0-1.5Z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15,13.5a.75.75,0,0,0,0,1.5h0a.75.75,0,0,0,0-1.5Z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.82,18.89c.1-.21.21-.42.33-.62a1,1,0,0,1,1.7,1c-.13.22-.27.44-.41.65l-.06,0a1,1,0,0,1-1.2-1.6,1.49,1.49,0,0,1-.36-.43Z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.18,18.89c-.1-.21-.21-.42-.33-.62a1,1,0,0,0-1.7,1c.13.22.27.44.41.65l.06,0a1,1,0,0,0,1.2-1.6,1.49,1.49,0,0,0,.36-.43Z"></path></svg>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-lg">LLM Rule Generation Engine</h4>
+                            <p class="text-sm text-gray-600"><b>Phase 1:</b> Validates variable relevance.<br><b>Phase 2:</b> Expands to complex, multi-conditional rules.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3: Knowledge Graph -->
+                    <div class="card rounded-lg p-4 flex items-center shadow-lg">
+                        <div class="flex-shrink-0 bg-green-500 text-white rounded-full h-12 w-12 flex items-center justify-center icon-shadow">
+                            <!-- Graph/DB Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-lg">Neo4j Knowledge Graph</h4>
+                            <p class="text-sm text-gray-600">The structured, machine-readable "brain" of the system, populated only with validated rules.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 2: Real-time Inference -->
+                <div class="space-y-6">
+                    <div class="text-center p-4 bg-purple-100 rounded-xl">
+                        <h3 class="text-xl font-bold text-purple-800">Phase 2: Real-Time Inference</h3>
+                        <p class="text-sm text-purple-700 font-semibold">(Patient-Specific Recommendations)</p>
+                    </div>
+
+                     <!-- Step 1: Patient Data -->
+                     <div class="card rounded-lg p-4 flex items-center shadow-lg arrow lg:arrow-horizontal">
+                        <div class="flex-shrink-0 bg-purple-500 text-white rounded-full h-12 w-12 flex items-center justify-center icon-shadow">
+                             <!-- Patient File Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-lg">Clinician Input</h4>
+                            <p class="text-sm text-gray-600">A specific set of patient findings is provided to the system.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: System Analysis -->
+                    <div class="card rounded-lg p-4 shadow-lg arrow lg:arrow-horizontal">
+                        <div class="flex-shrink-0 bg-purple-500 text-white rounded-full h-12 w-12 flex items-center justify-center icon-shadow">
+                            <!-- Cog Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-lg">Hybrid Inference Engine</h4>
+                             <p class="text-sm text-gray-600"><b>Logic Modules:</b> For simple, rapid analysis.<br><b>Graph Queries:</b> For complex, nuanced scenarios.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3: Recommendations -->
+                    <div class="card rounded-lg p-4 flex items-center shadow-lg">
+                        <div class="flex-shrink-0 bg-green-500 text-white rounded-full h-12 w-12 flex items-center justify-center icon-shadow">
+                            <!-- Checkmark Icon -->
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-lg">Actionable Recommendations</h4>
+                            <p class="text-sm text-gray-600">Provides a clear "second opinion" on treatments, risks, and follow-up tests.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Key Innovations Section -->
+        <section class="mt-16">
+            <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">Key Innovations & Expertise</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <!-- Innovation 1 -->
+                <div class="card rounded-lg p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <div class="bg-indigo-500 text-white rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-4 icon-shadow">
+                        <!-- Automation Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h5V4H4zm0 0l7 7m-7 0h5v5H4v-5zm12 2l-7 7m7-7v5h5V6h-5zm0 0h-5m5 7v5h5v-5h-5z" /></svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Automated Knowledge Base Creation</h3>
+                    <p class="text-gray-600">Efficiently translates complex, unstructured text into a structured and queriable knowledge graph.</p>
+                </div>
+                <!-- Innovation 2 -->
+                <div class="card rounded-lg p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <div class="bg-indigo-500 text-white rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-4 icon-shadow">
+                        <!-- Hybrid AI Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Hybrid AI Architecture</h3>
+                    <p class="text-gray-600">Combines the pattern-recognition of LLMs with the logical precision of a graph database for reliability and intelligence.</p>
+                </div>
+                <!-- Innovation 3 -->
+                <div class="card rounded-lg p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <div class="bg-indigo-500 text-white rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-4 icon-shadow">
+                        <!-- Dynamic Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Dynamic & Evidence-Based</h3>
+                    <p class="text-gray-600">Reasons over a rich network of evidence, providing nuanced recommendations beyond static flowcharts.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center mt-16 text-gray-500">
+            <p>&copy; 2024 Clinical Decision Support Systems. Advancing the future of healthcare.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
