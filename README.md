@@ -35,7 +35,7 @@ Our work on "[18F]AlF-PSMA-11 PET/CT for response assessment in metastatic prost
 ### Certificate of Excellence in Theranostics
 Our clinic has been recognized for its excellence in theranostics, demonstrating our high standards in integrated diagnostics and therapy.
 
-*(Certificate will be attached later)*
+[View the Certificate of Excellence](./assets/pdf/certificate-of-excellence.pdf)
 
 ---
 
