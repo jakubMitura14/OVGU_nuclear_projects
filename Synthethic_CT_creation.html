@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sCT Generation from Nuclear Medicine Scans</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #e0f2f1, #b2dfdb);
+        }
+        .card {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .section-title {
+            font-weight: 900;
+            font-size: 2.25rem;
+            color: #004d40; /* Dark Teal */
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .flow-arrow {
+            font-size: 3rem;
+            color: #00796b; /* Teal */
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .icon-bg {
+            background-color: #e0f2f1; /* Light Teal */
+            border-radius: 50%;
+            padding: 0.75rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="gradient-bg text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-3xl md:text-5xl font-black text-teal-900 leading-tight">sCT Generation from Nuclear Medicine Scans</h1>
+            <p class="mt-4 text-lg md:text-xl text-teal-700 max-w-4xl mx-auto">A Patch-Based Ensemble Approach to Generate High-Fidelity Synthetic CT (sCT) Images from PET Scans</p>
+        </header>
+
+        <!-- The Challenge Section -->
+        <section class="mb-16">
+            <h2 class="section-title">The Challenge: Adding Anatomy to Function</h2>
+            <div class="card">
+                <div class="flex flex-col md:flex-row items-center justify-around gap-8 text-center">
+                    <!-- From: Nuclear Scan -->
+                    <div class="flex flex-col items-center">
+                        <div class="icon-bg">
+                            <!-- Atom Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.196-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Nuclear Medicine Scan (PET)</h3>
+                        <p class="text-gray-600">Reveals metabolic function but lacks detailed anatomical information.</p>
+                    </div>
+                    
+                    <!-- Arrow -->
+                    <div class="flow-arrow hidden md:block">&rarr;</div>
+                     <div class="flow-arrow md:hidden">&darr;</div>
+
+                    <!-- To: Synthetic CT -->
+                    <div class="flex flex-col items-center">
+                       <div class="icon-bg">
+                           <!-- Skeleton Icon -->
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                       </div>
+                        <h3 class="text-xl font-bold mb-2">High-Fidelity Synthetic CT</h3>
+                        <p class="text-gray-600">Provides rich anatomical context, enhancing diagnostic value and treatment planning.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Innovations Section -->
+        <section class="mb-16">
+            <h2 class="section-title">Key Innovations & Expertise</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- 1. The Ensemble of Experts -->
+                <div class="card flex flex-col">
+                    <div class="flex-shrink-0 text-center">
+                        <div class="icon-bg">
+                            <!-- Puzzle Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" /></svg>
+                        </div>
+                    </div>
+                    <div class="flex-grow text-center">
+                      <h3 class="text-2xl font-bold mb-3 text-teal-800">1. The Ensemble of Experts</h3>
+                      <p class="text-gray-600 mb-4">Five independent nnU-Net models, pretrained as "experts" on specific anatomical regions, work together to generate a highly detailed sCT.</p>
+                    </div>
+                    <div class="space-y-2 mt-auto text-sm">
+                        <div class="flex items-center justify-center gap-2 p-2 bg-teal-50 rounded-lg"><span class="font-semibold">Expert 1:</span> Organs</div>
+                        <div class="flex items-center justify-center gap-2 p-2 bg-teal-50 rounded-lg"><span class="font-semibold">Expert 2:</span> Vertebrae</div>
+                        <div class="flex items-center justify-center gap-2 p-2 bg-teal-50 rounded-lg"><span class="font-semibold">Expert 3:</span> Cardiac</div>
+                        <div class="flex items-center justify-center gap-2 p-2 bg-teal-50 rounded-lg"><span class="font-semibold">Expert 4:</span> Muscles</div>
+                        <div class="flex items-center justify-center gap-2 p-2 bg-teal-50 rounded-lg"><span class="font-semibold">Expert 5:</span> Ribs</div>
+                    </div>
+                </div>
+
+                <!-- 2. The Anatomical Supervisor -->
+                <div class="card flex flex-col">
+                    <div class="flex-shrink-0 text-center">
+                        <div class="icon-bg">
+                            <!-- Shield/Check Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        </div>
+                    </div>
+                    <div class="flex-grow text-center">
+                        <h3 class="text-2xl font-bold mb-3 text-teal-800">2. The “Anatomical Supervisor”</h3>
+                        <p class="text-gray-600">A frozen, parallel ensemble of models acts as a "supervisor," constantly evaluating the generated sCT for anatomical correctness and sending a strong loss signal to correct errors.</p>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <div class="font-bold">Generator &rarr; sCT &rarr; Supervisor</div>
+                        <div class="text-2xl my-2">&darr;</div>
+                        <div class="font-bold text-red-500">Strong Loss Signal if Incorrect</div>
+                    </div>
+                </div>
+
+                <!-- 3. Efficient Patch-Based Training -->
+                <div class="card flex flex-col">
+                     <div class="flex-shrink-0 text-center">
+                        <div class="icon-bg">
+                           <!-- Grid Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
+                        </div>
+                    </div>
+                    <div class="flex-grow text-center">
+                        <h3 class="text-2xl font-bold mb-3 text-teal-800">3. Efficient Patch-Based Training</h3>
+                        <p class="text-gray-600">The model trains on smaller <span class="font-bold">128x128x128</span> patches of the full-resolution image, overcoming memory limitations and making advanced model development feasible.</p>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <div class="text-5xl font-extrabold text-teal-300">CT SCAN</div>
+                        <div class="text-2xl my-2">&darr;</div>
+                        <div class="grid grid-cols-3 gap-1 w-24 mx-auto">
+                            <div class="w-8 h-8 bg-teal-500"></div>
+                            <div class="w-8 h-8 bg-teal-500"></div>
+                            <div class="w-8 h-8 bg-teal-500"></div>
+                            <div class="w-8 h-8 bg-teal-500"></div>
+                            <div class="w-8 h-8 bg-teal-600 font-bold text-white text-xs flex items-center justify-center">128³</div>
+                            <div class="w-8 h-8 bg-teal-500"></div>
+                            <div class="w-8 h-8 bg-teal-500"></div>
+                            <div class="w-8 h-8 bg-teal-500"></div>
+                            <div class="w-8 h-8 bg-teal-500"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Clinical Impact Section -->
+        <section>
+            <h2 class="section-title">Clinical Impact & Significance</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <!-- Impact 1 -->
+                <div class="card">
+                    <div class="icon-bg mx-auto">
+                        <!-- Magnifying Glass Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Enhance Diagnostic Confidence</h3>
+                    <p class="text-gray-600">Provides crucial anatomical context for functional scans.</p>
+                </div>
+                <!-- Impact 2 -->
+                <div class="card">
+                    <div class="icon-bg mx-auto">
+                       <!-- Adjustments Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 16v-2m8-8h2M4 12H2m15.364 6.364l1.414 1.414M4.222 4.222l1.414 1.414M19.778 4.222l-1.414 1.414M4.222 19.778l1.414-1.414M12 18a6 6 0 100-12 6 6 0 000 12z" /></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Improve Attenuation Correction</h3>
+                    <p class="text-gray-600">Leads to more accurate quantification in PET imaging.</p>
+                </div>
+                <!-- Impact 3 -->
+                <div class="card">
+                    <div class="icon-bg mx-auto">
+                        <!-- Target Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 14a2 2 0 100-4 2 2 0 000 4z" /><path d="M12 22a10 10 0 100-20 10 10 0 000 20z" /></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Enable More Precise Treatment Planning</h3>
+                    <p class="text-gray-600">Allows clinicians to better localize tumors and pathologies.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center mt-16 py-6 border-t border-teal-200">
+            <p class="text-teal-800">This project showcases our ability to design and implement complex, multi-model AI systems that solve real-world clinical challenges.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
