@@ -1,0 +1,43 @@
+/* --- Video Background Styles --- */
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    object-fit: cover;
+}
+
+/* --- Project Page Specific Styles --- */
+.gradient-text {
+    background: linear-gradient(to right, #22d3ee, #38bdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.step-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px -5px rgba(34, 211, 238, 0.2), 0 8px 10px -6px rgba(34, 211, 238, 0.2);
+}
+
+.feature-card {
+     background-color: rgba(30, 41, 59, 0.5); /* slate-800 with opacity */
+     border: 1px solid #334155; /* slate-700 */
+     transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+    background-color: rgba(51, 65, 85, 0.7); /* slate-700 with opacity */
+    border-color: #22d3ee; /* cyan-400 */
+}
+
+.arrow {
+    color: #64748b; /* slate-500 */
+}
