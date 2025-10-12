@@ -10,9 +10,6 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: #333;
     line-height: 1.6;
-    /* Professional background gradient */
-    background-color: #f4f7f6;
-    background-image: linear-gradient(to bottom, #e9ecef, #ffffff 250px);
 }
 
 .wrapper {
@@ -131,73 +128,46 @@ footer p {
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -1;
+    z-index: -1000;
     object-fit: cover;
 }
 
-/* Override existing dark text styles */
-body {
-    background-color: #000; /* Fallback color */
-    color: #f1f1f1; /* Bright text color */
-}
-
 .wrapper {
-    background: transparent;
-    box-shadow: none;
-    position: relative;
-    border-radius: 8px;
-    padding: 2rem;
-    overflow: hidden; /* Ensures pseudo-element respects border-radius */
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
 }
 
-.wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.9) 15%, rgba(0, 0, 0, 0.9) 85%, transparent 100%);
-    z-index: -1; /* Positioned behind the content */
-    border-radius: inherit; /* Inherit border-radius from parent */
+.wrapper a {
+    color: #3498db;
 }
 
-header {
-    background: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+/* --- Project Page Specific Styles --- */
+.project-page .gradient-text {
+    background: linear-gradient(to right, #22d3ee, #38bdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-header h1, header p {
-    color: #ffffff;
+.project-page .step-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #ffffff;
-    border-bottom-color: rgba(255, 255, 255, 0.5);
+.project-page .step-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px -5px rgba(34, 211, 238, 0.2), 0 8px 10px -6px rgba(34, 211, 238, 0.2);
 }
 
-a, a:visited {
-    color: #add8e6; /* Light blue for links */
+.project-page .feature-card {
+     background-color: rgba(30, 41, 59, 0.5); /* slate-800 with opacity */
+     border: 1px solid #334155; /* slate-700 */
+     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-a:hover {
-    color: #ffffff;
+.project-page .feature-card:hover {
+    background-color: rgba(51, 65, 85, 0.7); /* slate-700 with opacity */
+    border-color: #22d3ee; /* cyan-400 */
 }
 
-.projects-section ul li {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.2);
-}
-
-.projects-section ul li a {
-    color: #f1f1f1;
-}
-
-.projects-section ul li:hover {
-    border-color: #add8e6;
-    background: rgba(255, 255, 255, 0.2);
-}
-
-footer p {
-    color: #f1f1f1;
+.project-page .arrow {
+    color: #64748b; /* slate-500 */
 }
