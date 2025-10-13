@@ -143,6 +143,8 @@ footer p {
         border-radius: 8px;
         padding: 2rem;
         overflow: hidden; /* Ensures pseudo-element respects border-radius */
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     & > .wrapper::before {
@@ -152,7 +154,7 @@ footer p {
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 15%, rgba(0, 0, 0, 0.8) 85%, transparent 100%);
+        background: radial-gradient(ellipse at center, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 80%);
         z-index: -1; /* Positioned behind the content */
         border-radius: inherit; /* Inherit border-radius from parent */
     }
@@ -171,11 +173,11 @@ footer p {
     }
 
     a, a:visited {
-        color: #add8e6; /* Light blue for links */
+        color: #ffffff; /* White for links */
     }
 
     a:hover {
-        color: #ffffff;
+        color: #f1f1f1;
     }
 
     .projects-section ul li {
@@ -188,7 +190,7 @@ footer p {
     }
 
     .projects-section ul li:hover {
-        border-color: #add8e6;
+        border-color: #ffffff;
         background: rgba(255, 255, 255, 0.2);
     }
 
