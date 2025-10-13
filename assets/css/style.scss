@@ -123,7 +123,13 @@ footer p {
 }
 
 /* --- Scoped Video Background Styles for Homepage --- */
-#home-with-video {
+body.home-page {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    background-image: none !important;
+    background-color: #000 !important;
+    color: #fff;
+
     #background-video {
         position: fixed;
         right: 0;
@@ -136,62 +142,64 @@ footer p {
         object-fit: cover;
     }
 
-    & > .wrapper {
+    .wrapper {
         background: transparent;
         box-shadow: none;
         position: relative;
         border-radius: 8px;
         padding: 2rem;
-        overflow: hidden; /* Ensures pseudo-element respects border-radius */
-        margin-top: 0;
-        margin-bottom: 0;
+        overflow: hidden;
+        margin: 0 auto;
     }
 
-    & > .wrapper::before {
+    .wrapper::before {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background: radial-gradient(ellipse at center, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 80%);
-        z-index: -1; /* Positioned behind the content */
-        border-radius: inherit; /* Inherit border-radius from parent */
+        background: radial-gradient(ellipse at center, rgba(0,0,0,0.85) 50%, rgba(0,0,0,0.4) 85%);
+        z-index: -1;
+        border-radius: inherit;
     }
 
     header {
-        background: transparent;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    header h1, header p, h1, h2, h3, h4, h5, h6 {
-        color: #ffffff;
+        background: transparent !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        border-bottom: none;
+        padding-top: 2rem;
+        margin-top: 0;
     }
 
     h1, h2, h3, h4, h5, h6 {
-        border-bottom-color: rgba(255, 255, 255, 0.5);
+        color: #ffffff;
+        border-bottom-color: rgba(255, 255, 255, 0.3);
     }
 
     a, a:visited {
-        color: #ffffff; /* White for links */
+        color: #ffffff !important;
+        text-decoration: none !important;
     }
 
     a:hover {
-        color: #f1f1f1;
+        color: #cccccc !important;
+        text-decoration: none !important;
     }
 
     .projects-section ul li {
         background: rgba(255, 255, 255, 0.1);
-        border-color: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
     }
 
     .projects-section ul li a {
-        color: #f1f1f1;
+        color: #f1f1f1 !important;
+        font-weight: bold;
     }
 
     .projects-section ul li:hover {
-        border-color: #ffffff;
-        background: rgba(255, 255, 255, 0.2);
+        border-color: #ffffff !important;
+        background: rgba(255, 255, 255, 0.25) !important;
     }
 
     footer p {
