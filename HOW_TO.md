@@ -7,7 +7,7 @@ This document explains how to add new projects or update existing information on
 The website is organized as follows:
 
 - `_config.yml`: The Jekyll configuration file. This sets the base theme for the site.
-- `README.md`: The main landing page for the website.
+- `index.md`: The main landing page for the website.
 - `HOW_TO.md`: This file, containing the contribution instructions.
 - `projects/`: This directory contains the individual Markdown subpages for each project.
 - `assets/`: This directory holds all static assets.
@@ -18,11 +18,11 @@ The website is organized as follows:
 
 - In the `projects/` directory, create a new Markdown file for your project (e.g., `new-cool-project.md`).
 - Add your project's content using Markdown. You can copy the structure from an existing project file.
-- Include a link back to the main page at the bottom: `[Back to all projects](../README.md)`
+- Include a link back to the main page at the bottom: `[Back to all projects](/)`
 
 ### 2. Add a Link to the Main Page
 
-- Open the root `README.md` file.
+- Open the root `index.md` file.
 - Find the `projects-section` `<div>`. The structure looks like this:
 
   ```html
@@ -44,7 +44,7 @@ The website is organized as follows:
   <li><a href="./projects/new-cool-project.html">Name of Your New Cool Project</a></li>
   ```
 
-**Note on Rendering:** To avoid issues with how GitHub Pages renders Markdown inside HTML, we use standard HTML tags (`<h2>`, `<ul>`, `<li>`) for the project list section in the `README.md`. Please maintain this structure.
+**Note on Rendering:** To avoid issues with how GitHub Pages renders Markdown inside HTML, we use standard HTML tags (`<h2>`, `<ul>`, `<li>`) for the project list section in the `index.md`. Please maintain this structure.
 
 ### 3. Add Any Images (Optional)
 

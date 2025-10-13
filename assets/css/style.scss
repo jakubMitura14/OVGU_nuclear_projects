@@ -99,7 +99,7 @@ a:hover {
 }
 
 /*-- Project Subpage "Back" Link --*/
-a[href="../README.md"] {
+a[href="/"] {
     display: inline-block;
     margin-top: 2rem;
     background-color: #f8f9fa;
@@ -109,7 +109,7 @@ a[href="../README.md"] {
     font-weight: bold;
 }
 
-a[href="../README.md"]:hover {
+a[href="/"]:hover {
     background-color: #e9ecef;
     border-color: #ced4da;
 }
@@ -142,7 +142,7 @@ body.home-page {
         object-fit: cover;
     }
 
-    & > .wrapper {
+    .wrapper {
         background: transparent;
         box-shadow: none;
         position: relative;

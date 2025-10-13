@@ -1,6 +1,3 @@
----
-layout: home
----
 # OVGU Nuclear Medicine Clinic - AI Expertise
 
 *Showcasing our innovation and research in Artificial Intelligence for Nuclear Medicine.*
