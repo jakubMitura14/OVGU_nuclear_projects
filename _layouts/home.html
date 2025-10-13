@@ -1,13 +1,32 @@
----
-layout: default
----
-<video autoplay muted loop id="background-video">
-  <source src="{{ '/assets/Whisk_mjy0utm5gdo5iwo10sylvtotczy2qtlkhtzl1ym.mp4' | relative_url }}" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-<div class="home-content">
-{{ content }}
-</div>
-<script>
-  document.body.classList.add('home-page');
-</script>
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    {% include head-custom.html %}
+  </head>
+  <body class="home-page">
+    <video autoplay muted loop id="background-video">
+      <source src="{{ '/assets/Whisk_mjy0utm5gdo5iwo10sylvtotczy2qtlkhtzl1ym.mp4' | relative_url }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="wrapper">
+      <header>
+        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
+      </header>
+      <section>
+      {{ content }}
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+  </body>
+</html>
