@@ -124,10 +124,10 @@ footer p {
 
 /* --- Scoped Video Background Styles for Homepage --- */
 body.home-page {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-    background-image: none !important;
-    background-color: #000 !important;
+    padding-top: 0;
+    margin-top: 0;
+    background-image: none;
+    background-color: #000;
     color: #fff;
 
     #background-video {
@@ -142,7 +142,7 @@ body.home-page {
         object-fit: cover;
     }
 
-    .wrapper {
+    & > .wrapper {
         background: transparent;
         box-shadow: none;
         position: relative;
@@ -165,7 +165,7 @@ body.home-page {
     }
 
     header {
-        background: transparent !important;
+        background: transparent;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         border-bottom: none;
         padding-top: 2rem;
@@ -178,28 +178,28 @@ body.home-page {
     }
 
     a, a:visited {
-        color: #ffffff !important;
-        text-decoration: none !important;
+        color: #ffffff;
+        text-decoration: none;
     }
 
     a:hover {
-        color: #cccccc !important;
-        text-decoration: none !important;
+        color: #cccccc;
+        text-decoration: none;
     }
 
     .projects-section ul li {
         background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .projects-section ul li a {
-        color: #f1f1f1 !important;
+        color: #f1f1f1;
         font-weight: bold;
     }
 
     .projects-section ul li:hover {
-        border-color: #ffffff !important;
-        background: rgba(255, 255, 255, 0.25) !important;
+        border-color: #ffffff;
+        background: rgba(255, 255, 255, 0.25);
     }
 
     footer p {
