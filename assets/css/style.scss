@@ -122,3 +122,77 @@ footer p {
     margin-top: 3rem;
 }
 
+/* --- Scoped Video Background Styles for Homepage --- */
+#home-with-video {
+    #background-video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1000;
+        object-fit: cover;
+    }
+
+    & > .wrapper {
+        background: transparent;
+        box-shadow: none;
+        position: relative;
+        border-radius: 8px;
+        padding: 2rem;
+        overflow: hidden; /* Ensures pseudo-element respects border-radius */
+    }
+
+    & > .wrapper::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 15%, rgba(0, 0, 0, 0.8) 85%, transparent 100%);
+        z-index: -1; /* Positioned behind the content */
+        border-radius: inherit; /* Inherit border-radius from parent */
+    }
+
+    header {
+        background: transparent;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    header h1, header p, h1, h2, h3, h4, h5, h6 {
+        color: #ffffff;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        border-bottom-color: rgba(255, 255, 255, 0.5);
+    }
+
+    a, a:visited {
+        color: #add8e6; /* Light blue for links */
+    }
+
+    a:hover {
+        color: #ffffff;
+    }
+
+    .projects-section ul li {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .projects-section ul li a {
+        color: #f1f1f1;
+    }
+
+    .projects-section ul li:hover {
+        border-color: #add8e6;
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    footer p {
+        color: #f1f1f1;
+    }
+}
