@@ -27,7 +27,8 @@ Part of the [University Clinic for Radiology and Nuclear Medicine](https://www.m
 <div class="grants-section">
   <div class="grant-card">
     <h3>SIKIT: Strengthening Autonomy in the Implementation of AI Technologies in Medicine</h3>
-    <p>An interdisciplinary research group focused on developing, evaluating, and implementing advanced AI models to improve the diagnosis and treatment of thyroid and prostate cancer. This project bridges the gap between technical AI expertise and clinical practice while ensuring the responsible and autonomous application of AI in medicine.</p>
+    <p>An interdisciplinary research project aimed at the systematic development, evaluation, and implementation of clinical AI applications in the context of patient-related care scenarios. The focus is on testing trustworthy, data protection-compliant, and comprehensible AI models to support diagnostic, documentary, and therapeutic processes. The AI applications developed are tested in several clinical pilot projects to systematically evaluate their practical relevance, integration capability, and transferability to other disciplines.</p>
+    <p><a href="https://krn.med.ovgu.de/Nuklearmedizin/Forschung/SIKIT.html">Learn more about the SIKIT project</a></p>
     <ul>
       <li><strong>Funding Program:</strong> "Sachsen-Anhalt WISSENSCHAFT" (co-financed by the EU's EFRE program)</li>
       <li><strong>Total Funding:</strong> €1,290,924.68</li>
