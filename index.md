@@ -54,6 +54,9 @@ Our clinic has been recognized for its excellence in theranostics, demonstrating
 
 [View the Certificate of Excellence](./assets/pdf/certificate-of-excellence.pdf)
 
+### Close Cooperation with STIMULATE
+Our clinic maintains a close and active cooperation with the STIMULATE research campus in Magdeburg. STIMULATE (Solution Centre for Image Guided Local Therapies) is a leading public-private partnership that brings together interdisciplinary teams from clinical practice, industry, and science to research and develop highly innovative methods for image-guided, minimally invasive medicine. Their work focuses on optimizing the treatment of cancer, as well as cardiological and neurological diseases, to create patient-friendly diagnostic and therapeutic procedures.
+
 ---
 
 *For instructions on how to contribute to this page, please see the [HOW_TO.md](./HOW_TO.md) file.*
