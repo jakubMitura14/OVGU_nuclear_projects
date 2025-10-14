@@ -202,6 +202,31 @@ body.home-page {
         background: rgba(255, 255, 255, 0.25);
     }
 
+    .grants-section {
+        margin-top: 2rem;
+    }
+
+    .grant-card {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .grant-card h3 {
+        margin-top: 0;
+    }
+
+    .grant-card ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .grant-card ul li {
+        margin-bottom: 0.5rem;
+    }
+
     footer p {
         color: #f1f1f1;
     }

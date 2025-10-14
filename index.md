@@ -22,6 +22,23 @@ Part of the [University Clinic for Radiology and Nuclear Medicine](https://www.m
 
 ---
 
+## Our Grants
+
+<div class="grants-section">
+  <div class="grant-card">
+    <h3>SIKIT: Strengthening Autonomy in the Implementation of AI Technologies in Medicine</h3>
+    <p>An interdisciplinary research group focused on developing, evaluating, and implementing advanced AI models to improve the diagnosis and treatment of thyroid and prostate cancer. This project bridges the gap between technical AI expertise and clinical practice while ensuring the responsible and autonomous application of AI in medicine.</p>
+    <ul>
+      <li><strong>Funding Program:</strong> "Sachsen-Anhalt WISSENSCHAFT" (co-financed by the EU's EFRE program)</li>
+      <li><strong>Total Funding:</strong> €1,290,924.68</li>
+      <li><strong>Duration:</strong> 42 months (July 2024 - December 2027)</li>
+      <li><strong>Lead:</strong> Prof. Michael Kreißl, Clinic for Radiology and Nuclear Medicine</li>
+    </ul>
+  </div>
+</div>
+
+---
+
 ## Featured Publication
 
 Our work on "[18F]AlF-PSMA-11 PET/CT for response assessment in metastatic prostate cancer patients undergoing [177Lu]Lu-PSMA-617 radioligand therapy](https://www.mdpi.com/2072-6694/17/14/2285)" has been published in the journal *Cancers*. This highlights our commitment to advancing the field of nuclear medicine through cutting-edge research.
