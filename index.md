@@ -26,9 +26,9 @@ Part of the [University Clinic for Radiology and Nuclear Medicine](https://www.m
 
 <div class="infographics-section">
   <ul>
-    <li><a href="./infographic-1.html">Infographic 1: High-Level Project Overview</a></li>
-    <li><a href="./infographic-2.html">Infographic 2: AI-Powered Diagnostics</a></li>
-    <li><a href="./infographic-3.html">Infographic 3: Workflow & Data Automation</a></li>
+    <li><a href="./assets/images/infographic-1.png">Infographic 1: High-Level Project Overview</a></li>
+    <li><a href="./assets/images/infographic-2.png">Infographic 2: AI-Powered Diagnostics</a></li>
+    <li><a href="./assets/images/infographic-3.png">Infographic 3: Workflow & Data Automation</a></li>
   </ul>
 </div>
 
