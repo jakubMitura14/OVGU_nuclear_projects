@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Overview - AI in Nuclear Medicine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .infographic-container {
+            width: 210mm;
+            height: 297mm;
+            margin: 20px auto;
+            padding: 15mm;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .category-card {
+            border-left: 4px solid;
+            transition: all 0.3s ease;
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <!-- Header -->
+        <header class="text-center border-b-2 border-gray-200 pb-6 mb-8">
+            <h1 class="text-4xl font-black text-gray-800">AI-Powered Innovations in Nuclear Medicine</h1>
+            <p class="text-lg text-gray-600 mt-2">A summary of projects driving the future of diagnostics and clinical efficiency.</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow space-y-10">
+            <!-- Section 1: Enhancing Diagnostic Imaging -->
+            <div>
+                <h2 class="text-2xl font-bold text-gray-700 mb-4 border-b pb-2">Enhancing Diagnostic Imaging</h2>
+                <div class="space-y-6">
+                    <!-- Synthetic CT Generation -->
+                    <div class="category-card border-blue-500 p-4 bg-blue-50 rounded-lg">
+                        <h3 class="text-xl font-bold text-blue-800">Synthetic CT (sCT) Generation</h3>
+                        <p class="text-gray-700 mt-1">
+                            <strong>Usefulness:</strong> By generating high-quality anatomical CT scans from functional PET scans, this project provides vital context that helps clinicians more accurately locate tumors and understand disease progression. It improves diagnostic confidence and enables more precise treatment planning without additional radiation exposure.
+                        </p>
+                    </div>
+                    <!-- Evolutionary 3D Modeling -->
+                    <div class="category-card border-indigo-500 p-4 bg-indigo-50 rounded-lg">
+                        <h3 class="text-xl font-bold text-indigo-800">Evolutionary 3D Geometric Modeling</h3>
+                        <p class="text-gray-700 mt-1">
+                            <strong>Usefulness:</strong> This project creates self-improving AI that generates perfect 3D models of medical images ("supervoxels"). This is crucial for accurately measuring the size and shape of tumors or organs, leading to better-quantified disease assessment and more reliable clinical research.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Streamlining Clinical Workflows -->
+            <div>
+                <h2 class="text-2xl font-bold text-gray-700 mb-4 border-b pb-2">Streamlining Clinical Workflows</h2>
+                <div class="space-y-6">
+                    <!-- Semi-Automatic Segmentation Pipeline -->
+                    <div class="category-card border-teal-500 p-4 bg-teal-50 rounded-lg">
+                        <h3 class="text-xl font-bold text-teal-800">Semi-Automatic Segmentation Pipeline</h3>
+                        <p class="text-gray-700 mt-1">
+                            <strong>Usefulness:</strong> This tool dramatically accelerates the tedious process of outlining organs and tumors in medical scans. By providing an AI-generated first draft for clinicians to review, it speeds up research and ensures that annotations are consistent and reproducible, which is critical for clinical trials.
+                        </p>
+                    </div>
+                    <!-- Clinical Decision Support for Thyroid Cancer -->
+                    <div class="category-card border-purple-500 p-4 bg-purple-50 rounded-lg">
+                        <h3 class="text-xl font-bold text-purple-800">Clinical Decision Support for Thyroid Cancer</h3>
+                        <p class="text-gray-700 mt-1">
+                            <strong>Usefulness:</strong> This system acts as an expert "second opinion" for doctors. It translates complex medical guidelines into clear, patient-specific recommendations for treating thyroid cancer. This helps standardize care, reduce errors, and ensure that every patient benefits from the latest evidence-based practices.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Unlocking Medical Data -->
+            <div>
+                 <h2 class="text-2xl font-bold text-gray-700 mb-4 border-b pb-2">Unlocking Medical Data</h2>
+                <div class="space-y-6">
+                    <!-- German Radiology Report Analyzer -->
+                    <div class="category-card border-amber-500 p-4 bg-amber-50 rounded-lg">
+                        <h3 class="text-xl font-bold text-amber-800">German Radiology Report Analyzer</h3>
+                        <p class="text-gray-700 mt-1">
+                           <strong>Usefulness:</strong> This project unlocks the valuable information trapped in unstructured, text-based radiology reports. By converting them into structured, searchable data, it enables large-scale research, helps identify trends in disease, and makes clinical data more Findable, Accessible, Interoperable, and Reusable (FAIR).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center mt-auto pt-6 border-t-2 border-gray-200">
+            <p class="text-sm text-gray-500">Department of Nuclear Medicine - AI-Powered Clinical Solutions</p>
+        </footer>
+    </div>
+</body>
+</html>
